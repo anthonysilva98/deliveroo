@@ -1,6 +1,7 @@
 import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import { ArrowRightIcon } from "react-native-heroicons/outline";
+import RestaurantCard from "./RestaurantCard";
 
 const FeaturedRow = ({ id, title, description }) => {
   return (
@@ -17,7 +18,20 @@ const FeaturedRow = ({ id, title, description }) => {
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{ paddingHorizontal: 15 }}
         className="pt-4"
-      ></ScrollView>
+      >
+        <RestaurantCard
+          id={123}
+          imgUrl="https://links.papareact.com/wru"
+          title="Nando Testing"
+          rating={4}
+          genre="Japanese"
+          address="123 Main Street"
+          short_description="Delicious Food"
+          dishes={[]}
+          long={20}
+          lat={0}
+        />
+      </ScrollView>
     </View>
   );
 };
